@@ -1,0 +1,30 @@
+<!doctype html>
+<html dir='ltr' lang='en-gb'>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width'/>
+		<title>Breadcrumb</title>
+		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+		<link href='../kb_normalize/kb_normalize.css' rel='stylesheet'/>
+		<link href='kb_breadcrumb.css' rel='stylesheet'/>
+	</head>
+	<body>
+		<!-- Links and icons. !-->
+		<div class='kb breadcrumb'>
+			<a class='section' href='#home'><i aria-hidden='true' class='fa fa-home'></i> Home</a>
+			<i aria-hidden='true' class='divider fa fa-chevron-right'></i>
+			<a class='section' href='#products'><i aria-hidden='true' class='fa fa-cube'></i> Products</a>
+			<i aria-hidden='true' class='divider fa fa-chevron-right'></i>
+			<span class='active section'><i aria-hidden='true' class='fa fa-book'></i> Books</span>
+		</div>
+		<hr/>
+		<!-- No links and no icons. !-->
+		<div class='kb breadcrumb'>
+			<span class='section'>Home</span>
+			<i aria-hidden='true' class='divider fa fa-chevron-right'></i>
+			<span class='section'>Products</span>
+			<i aria-hidden='true' class='divider fa fa-chevron-right'></i>
+			<span class='active section'>Books</span>
+		</div>
+	</body>
+</html>
