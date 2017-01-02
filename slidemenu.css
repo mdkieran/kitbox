@@ -1,0 +1,83 @@
+.kb.slidemenu i {
+	font-size: 14px;
+}
+
+.kb.slidemenu a i {
+	width: 26px; /* 14 + 12 */
+}
+
+/*
+1. We need to set the visibility to hidden so that it is not tabbable (for
+   blind users) and we cannot set it to display none because then css
+   transitions would not work. http://stackoverflow.com/a/273076
+2. There are two reasons for this. Firstly, setting the visibility to hidden
+   will not collapse the ul. Secondly, http://stackoverflow.com/a/8331169
+*/
+
+.kb.slidemenu ul {
+	max-height: 0; /* 2 */
+	opacity: 0; /* 1 */
+	visibility: hidden; /* 1 */
+}
+
+.kb.slidemenu div {
+	display: flex;
+}
+
+.kb.slidemenu div a {
+	flex: 1 0 auto;
+	padding: 12px;
+}
+
+/*
+1. There is no padding on the top or bottom so that the overall height of the
+   flex container is not adjusted by the contents of the button. Besides, the
+   contents of the button will be vertically aligned anyway, because buttons
+   are magic like that.
+*/
+
+.kb.slidemenu div button {
+	padding: 0 12px; /* 1 */
+}
+
+/*
+Style the dropdown button icon when the menu is not active.
+This requires font awesome.
+*/
+
+.kb.slidemenu div button i::before {
+	content: '\f0d7';
+}
+
+/*
+1. Hover.
+2. Active.
+3. Hover and active.
+*/
+
+.kb.slidemenu div:hover, /* 1 */
+.kb.slidemenu button:hover, /* 1 */
+.kb.slidemenu li.active > ul, /* 2 */
+.kb.slidemenu li.active > div button, /* 2 */
+.kb.slidemenu li.active > div a:hover /* 3 */ {
+	background: rgba(0,0,0,.15);
+}
+
+.kb.slidemenu li.active > ul /* 2 */ {
+	max-height: 2160px;
+	opacity: 1;
+	transition: max-height 1s, opacity .4s;
+	visibility: visible;
+}
+
+.kb.slidemenu li.active > div button i::before /* 2 */ {
+	content: '\f0d8';
+}
+
+.kb.slidemenu li.active > div button:hover /* 3 */ {
+	background: rgba(0,0,0,.3);
+}
+
+.kb.slidemenu li.active > div:hover /* 3 */ {
+	background: transparent;
+}

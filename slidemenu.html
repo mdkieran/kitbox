@@ -1,0 +1,48 @@
+<!doctype html>
+<html dir='ltr' lang='en-gb'>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width'/>
+		<title>Slidemenu</title>
+		<link href='normalize.css' rel='stylesheet'/>
+		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+		<link href='slidemenu.css' rel='stylesheet'/>
+	</head>
+	<body>
+		<ul class='kb slidemenu'>
+			<li><div><a href='#'><i class='fa fa-star' aria-hidden='true'></i>Item 1</a></div></li>
+			<!-- This menu is active on page load. Notice that aria-expanded is still set to false, this is because javascript works this out for us. !-->
+			<li class='active'><div><a href='#'><i class='fa fa-star' aria-hidden='true'></i>Item 2</a><button aria-haspopup='true' aria-expanded='false'><i class='fa' aria-hidden='true'></i></button></div>
+				<ul>
+					<li><div><a href='#'><i class='fa fa-star'></i>Item 2.1</a></div></li>
+					<li><div><a href='#'><i class='fa fa-star'></i>Item 2.2</a></div></li>
+					<li><div><a href='#'><i class='fa fa-star'></i>Item 2.3</a></div></li>
+				</ul>
+			</li>
+			<li><div><a href='#'><i class='fa fa-star'></i>Item 3</a></div></li>
+			<li><div><a href='#'><i class='fa fa-star'></i>Item 4</a><button aria-haspopup='true' aria-expanded='false'><i class='fa' aria-hidden='true'></i></button></div>
+				<ul>
+					<li><div><a href='#'><i class='fa fa-star'></i>Item 4.1</a></div></li>
+					<li><div><a href='#'><i class='fa fa-star'></i>Item 4.2</a><button aria-haspopup='true' aria-expanded='false'><i class='fa' aria-hidden='true'></i></button></div>
+						<ul>
+							<li><div><a href='#'><i class='fa fa-star'></i>Item 4.2.1</a></div></li>
+							<li><div><a href='#'><i class='fa fa-star'></i>Item 4.2.2</a><button aria-haspopup='true' aria-expanded='false'><i class='fa' aria-hidden='true'></i></button></div>
+								<ul>
+									<li><div><a href='#'><i class='fa fa-star'></i>Item 4.2.2.1</a></div></li>
+									<li><div><a href='#'><i class='fa fa-star'></i>Item 4.2.2.2</a></div></li>
+									<li><div><a href='#'><i class='fa fa-star'></i>Item 4.2.2.3</a></div></li>
+								</ul>
+							</li>
+							<li><div><a href='#'><i class='fa fa-star'></i>Item 4.2.3</a></div></li>
+						</ul>
+					</li>
+					<li><div><a href='#'><i class='fa fa-star'></i>Item 4.3</a></div></li>
+				</ul>
+			</li>
+			<li><div><a href='#'><i class='fa fa-star'></i>Item 5</a></div></li>
+		</ul>
+		<!-- scripts !-->
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		<script src='slidemenu.js'></script>
+	</body>
+</html>
