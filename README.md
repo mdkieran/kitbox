@@ -1,2 +1,2 @@
-# kitbox
-CSS Framework.
+# Kitbox
+CSS framework.
