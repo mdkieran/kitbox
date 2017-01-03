@@ -1,5 +1,9 @@
+/*
+1. The icons are sharpest at 14px.
+*/
+
 .kb.slidemenu i {
-	font-size: 14px;
+	font-size: 14px; /* 1 */
 }
 
 .kb.slidemenu a i {
@@ -41,8 +45,8 @@
 }
 
 /*
-Style the dropdown button icon when the menu is not active.
-This requires font awesome.
+Style the dropdown button icon when the menu is not active. This requires
+font awesome.
 */
 
 .kb.slidemenu div button i::before {
@@ -60,13 +64,13 @@ This requires font awesome.
 .kb.slidemenu li.active > ul, /* 2 */
 .kb.slidemenu li.active > div button, /* 2 */
 .kb.slidemenu li.active > div a:hover /* 3 */ {
-	background: rgba(0,0,0,.15);
+	background: rgba(0,0,0,0.15);
 }
 
 .kb.slidemenu li.active > ul /* 2 */ {
 	max-height: 2160px;
 	opacity: 1;
-	transition: max-height 1s, opacity .4s;
+	transition: max-height 1s, opacity 0.4s;
 	visibility: visible;
 }
 
@@ -75,7 +79,7 @@ This requires font awesome.
 }
 
 .kb.slidemenu li.active > div button:hover /* 3 */ {
-	background: rgba(0,0,0,.3);
+	background: rgba(0,0,0,0.3);
 }
 
 .kb.slidemenu li.active > div:hover /* 3 */ {
