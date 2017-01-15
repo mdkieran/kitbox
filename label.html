@@ -1,0 +1,341 @@
+<!doctype html>
+<html dir='ltr' lang='en-gb'>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width'/>
+		<title>Label</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet'/>
+		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+		<link href='normalize.css' rel='stylesheet'/>
+		<link href='grid.css' rel='stylesheet'/>
+		<link href='label.css' rel='stylesheet'/>
+		<style>
+			html {
+				font-family: 'Open Sans';
+			}
+
+			body {
+				background: #efefef;
+			}
+
+			#example_wrapper {
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='example_wrapper' class='kb_grid'>
+			<h1>Label examples</h1>
+			<p class='pad_top'>Feel free to mix and match. You can add/remove elements and classes to come up with your own designs.</p>
+			<h2 class='pad_top'>Type 1 (nothing is linked)</h2>
+			<div class='pad_top'>
+				<span class='kb_label'>
+					<img class='image' src='image/avatar/small/ade.jpg'/>
+					<i class='icon fa fa-bolt'></i>
+					<span class='label'>Label</span>
+					<span class='description'>Description</span>
+					<i class='close fa fa-times'></i>
+				</span>
+				<span class='kb_label'>
+					<img class='image' src='image/avatar/small/christian.jpg'/>
+					<span class='label'>Label</span>
+				</span>
+				<span class='kb_label'>
+					<i class='icon fa fa-tag'></i>
+					<span class='label'>Label</span>
+				</span>
+			</div>
+			<h2 class='pad_top'>Type 2 (if there is a link, it is not grouped with anything else)</h2>
+			<div class='pad_top'>
+				<span class='kb_label'>
+					<a class='image' href='#image'><img src='image/avatar/small/elliot.jpg'/></a>
+					<a class='icon' href='#icon'><i class='fa fa-group'></i></a>
+					<a class='label' href='#label'>Label</a>
+					<a class='description' href='#description'>Description</a>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+				<span class='kb_label'>
+					<a class='icon' href='#icon'><i class='fa fa-cog'></i></a>
+					<span class='label'>Label</span>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+				<span class='kb_label'>
+					<a class='label' href='#label'>Label</a>
+					<a class='description' href='#description'>Description</a>
+				</span>
+			</div>
+			<h2 class='pad_top'>Type 3 (the entire thing is a link)</h2>
+			<div class='pad_top'>
+				<a class='kb_label' href='#everything'>
+					<img class='image' src='image/avatar/small/jenny.jpg'/>
+					<i class='icon fa fa-bolt'></i>
+					<span class='label'>Label</span>
+					<span class='description'>Description</span>
+					<i class='close fa fa-times'></i>
+				</a>
+				<a class='kb_label' href='#everything'>
+					<img class='image' src='image/avatar/small/joe.jpg'/>
+					<span class='label'>Label</span>
+					<span class='description'>Description</span>
+				</a>
+				<a class='kb_label' href='#everything'>
+					<span class='label'>Label</span>
+					<i class='close fa fa-times'></i>
+				</a>
+			</div>
+			<h2 class='pad_top'>Type 4 (the image, icon, and label are group linked)</h2>
+			<div class='pad_top'>
+				<span class='kb_label'>
+					<a class='link_group' href='#image+icon+label'>
+						<img class='image' src='image/avatar/small/nan.jpg'/>
+						<i class='icon fa fa-star'></i>
+						<span class='label'>Label</span>
+					</a>
+					<a class='description' href='#description'>Description</a>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+				<span class='kb_label'>
+					<a class='link_group' href='#icon+label'>
+						<i class='icon fa fa-soccer-ball-o'></i>
+						<span class='label'>Label</span>
+					</a>
+					<span class='description'>Description</span>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+				<span class='kb_label'>
+					<a class='link_group' href='#image+label'>
+						<img class='image' src='image/avatar/small/stevie.jpg'/>
+						<span class='label'>Label</span>
+					</a>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+			</div>
+			<h2 class='pad_top'>Type 5 (the icon, label, and description are group linked, the image can be linked separately)</h2>
+			<div class='pad_top'>
+				<span class='kb_label'>
+					<a class='image' href='#image'><img src='image/avatar/small/veronika.jpg'/></a>
+					<a class='link_group' href='#icon+label+description'>
+						<i class='icon fa fa-phone'></i>
+						<span class='label'>Label</span>
+						<span class='description'>Description</span>
+					</a>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+				<span class='kb_label'>
+					<img class='image' src='image/avatar/small/zoe.jpg'/>
+					<a class='link_group' href='#label+description'>
+						<span class='label'>Label</span>
+						<span class='description'>Description</span>
+					</a>
+				</span>
+				<span class='kb_label'>
+					<a class='image' href='#image'><img src='image/avatar/small/nan.jpg'/></a>
+					<a class='link_group' href='#icon+label'>
+						<i class='icon fa fa-user'></i>
+						<span class='label'>Label</span>
+					</a>
+				</span>
+			</div>
+			<h2 class='pad_top'>Different colors</h2>
+			<div class='pad_top'>
+				<span class='kb_label white'><i class='icon fa fa-adjust'></i><span class='label'>White</span></span>
+				<span class='kb_label red'><i class='icon fa fa-adjust'></i><span class='label'>Red</span></span>
+				<span class='kb_label orange'><i class='icon fa fa-adjust'></i><span class='label'>Orange</span></span>
+				<span class='kb_label yellow'><i class='icon fa fa-adjust'></i><span class='label'>Yellow</span></span>
+				<span class='kb_label olive'><i class='icon fa fa-adjust'></i><span class='label'>Olive</span></span>
+				<span class='kb_label green'><i class='icon fa fa-adjust'></i><span class='label'>Green</span></span>
+				<span class='kb_label teal'><i class='icon fa fa-adjust'></i><span class='label'>Teal</span></span>
+				<span class='kb_label blue'><i class='icon fa fa-adjust'></i><span class='label'>Blue</span></span>
+				<span class='kb_label violet'><i class='icon fa fa-adjust'></i><span class='label'>Violet</span></span>
+				<span class='kb_label purple'><i class='icon fa fa-adjust'></i><span class='label'>Purple</span></span>
+				<span class='kb_label pink'><i class='icon fa fa-adjust'></i><span class='label'>Pink</span></span>
+				<span class='kb_label brown'><i class='icon fa fa-adjust'></i><span class='label'>Brown</span></span>
+				<span class='kb_label gray'><i class='icon fa fa-adjust'></i><span class='label'>Gray</span></span>
+				<span class='kb_label black'><i class='icon fa fa-adjust'></i><span class='label'>Black</span></span>
+			</div>
+			<h2 class='pad_top'>Different sizes</h2>
+			<div class='pad_top'>
+				<span class='kb_label orange xs'>
+					<img class='image' src='image/avatar/small/ade.jpg'/>
+					<span class='label'>Extra small</span>
+					<span class='description'>xs</span>
+				</span>
+				<span class='kb_label yellow sm'>
+					<img class='image' src='image/avatar/small/christian.jpg'/>
+					<span class='label'>Small</span>
+					<span class='description'>sm</span>
+				</span>
+				<span class='kb_label red'>
+					<img class='image' src='image/avatar/small/joe.jpg'/>
+					<span class='label'>Medium</span>
+					<span class='description'>md</span>
+				</span>
+				<span class='kb_label teal lg'>
+					<img class='image' src='image/avatar/small/jenny.jpg'/>
+					<span class='label'>Large</span>
+					<span class='description'>lg</span>
+				</span>
+				<span class='kb_label pink xl'>
+					<img class='image' src='image/avatar/small/zoe.jpg'/>
+					<span class='label'>Extra large</span>
+					<span class='description'>xl</span>
+				</span>
+			</div>
+			<h2 class='pad_top'>Circular</h2>
+			<div class='pad_top'>
+				<a class='kb_label red sm circular' href='#label'>
+					<span class='label'>28</span>
+				</a>
+				<a class='kb_label green sm circular' href='#label'>
+					<span class='label'>29</span>
+				</a>
+				<a class='kb_label blue sm circular' href='#label'>
+					<span class='label'>30</span>
+				</a>
+				<span class='kb_label pink sm circular'>
+					<img class='image' src='image/avatar/small/nan.jpg'/>
+					<span class='label'>Circular</span>
+					<a class='description' href='#description'>Description</a>
+				</span>
+				<span class='kb_label orange sm circular'>
+					<img class='image' src='image/avatar/small/nan.jpg'/>
+					<i class='icon fa fa-plug'></i>
+					<span class='label'>Circular</span>
+					<a class='description' href='#description'>Description</a>
+				</span>
+			</div>
+			<h2 class='pad_top'>Pointing</h2>
+			<p class='pad_top'>The pointers on the labels are pseudo elements and do not alter the positioning of the labels in any way. If you want some margin then you can use kb_grid mar_left or mar_right.</p>
+			<div class='pad_top'>
+				<span class='kb_label red point top mar_right'>
+					<i class='icon fa fa-ban'></i>
+					<span class='label'>Label</span>
+				</span>
+				<span class='kb_label green point right mar_right'>
+					<i class='icon fa fa-check'></i>
+					<span class='label'>Label</span>
+				</span>
+				<span class='kb_label point bottom mar_right'>
+					<span class='label'>Label</span>
+				</span>
+				<span class='kb_label black point left'>
+					<span class='label'>Label</span>
+				</span>
+			</div>
+			<h2 class='pad_top'>Corners</h2>
+			<p class='pad_top'>Corner labels look for the nearest relatively positioned element and then stick to the top left or right of it. They are linkable too.</p>
+			<div class='flex gutter'>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<a class='kb_label_corner white top_left' href='#top_left'><i class='fa fa-heart'></i></a>
+						<a class='kb_label_corner red top_right' href='#top_right'><i class='fa fa-heart'></i></a>
+					</div>
+				</div>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<a class='kb_label_corner orange top_left' href='#top_left'><i class='fa fa-heart'></i></a>
+						<a class='kb_label_corner yellow top_right' href='#top_right'><i class='fa fa-heart'></i></a>
+					</div>
+				</div>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<a class='kb_label_corner olive top_left' href='#top_left'><i class='fa fa-heart'></i></a>
+						<a class='kb_label_corner green top_right' href='#top_right'><i class='fa fa-heart'></i></a>
+					</div>
+				</div>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<a class='kb_label_corner teal top_left' href='#top_left'><i class='fa fa-heart'></i></a>
+						<a class='kb_label_corner blue top_right' href='#top_right'><i class='fa fa-heart'></i></a>
+					</div>
+				</div>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<span class='kb_label_corner violet top_left'><i class='fa fa-star'></i></span>
+						<span class='kb_label_corner purple top_right'><i class='fa fa-star'></i></span>
+					</div>
+				</div>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<span class='kb_label_corner pink top_left'><i class='fa fa-star'></i></span>
+						<span class='kb_label_corner brown top_right'><i class='fa fa-star'></i></span>
+					</div>
+				</div>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<span class='kb_label_corner gray top_left'><i class='fa fa-star'></i></span>
+						<span class='kb_label_corner black top_right'><i class='fa fa-star'></i></span>
+					</div>
+				</div>
+				<div class='col_xs_6 col_md_3'>
+					<div style='position: relative;'>
+						<img src='image/wireframe/image.png' style='display: block; width: 100%;'>
+						<span class='kb_label_corner red top_left'><i class='fa fa-star'></i></span>
+						<span class='kb_label_corner white top_right'><i class='fa fa-star'></i></span>
+					</div>
+				</div>
+			</div>
+			<h2 class='pad_top'>More examples</h2>
+			<div class='pad_top'>
+				<span class='kb_label orange sm point left'>
+					<i class='icon fa fa-warning'></i>
+					<span class='label'>Warning</span>
+					<span class='description'>You cannot do that</span>
+				</span>
+				<span class='kb_label gray sm'>
+					<span class='label'>Room</span>
+					<span class='description'>101</span>
+				</span>
+				<a class='kb_label violet sm' href='#everything'>
+					<i class='icon fa fa-envelope'></i>
+					<span class='label'>Mail</span>
+				</a>
+				<span class='kb_label teal sm'>
+					<a class='link_group' href='#icon+label'>
+						<i class='icon fa fa-tag'></i>
+						<span class='label'>Tag</span>
+					</a>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+				<span class='kb_label blue sm'>
+					<i class='icon fa fa-envelope'></i>
+					<span class='label'>252</span>
+					<a class='description' href='#description'>View mail</a>
+				</span>
+				<span class='kb_label black sm point bottom'>
+					<a class='link_group' href='#image+label'>
+						<img class='image' src='image/avatar/small/nan.jpg'/>
+						<span class='label'>Label</span>
+					</a>
+					<a class='description' href='#description'>Description</a>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+				<span class='kb_label green sm point top'>
+					<span class='description'>Success</span>
+				</span>
+				<a class='kb_label red sm circular' href='#label'>
+					<span class='label'>Red</span>
+				</a>
+				<a class='kb_label orange sm circular' href='#label'>
+					<span class='label'>Orange</span>
+				</a>
+				<a class='kb_label pink sm circular' href='#label'>
+					<span class='label'>Pink</span>
+				</a>
+				<span class='kb_label brown sm'>
+					<a class='label' href='#label'>Filter</a>
+					<a class='close' href='#close'><i class='fa fa-times'></i></a>
+				</span>
+			</div>
+		</div>
+	</body>
+</html>

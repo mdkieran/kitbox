@@ -1,0 +1,410 @@
+/*
+Structure
+================================================================================
+*/
+
+/* md */
+
+.kb_label {
+	display: inline-flex;
+	position: relative;
+	font-weight: bold;
+	vertical-align: text-top;
+}
+
+.kb_label .icon,
+.kb_label .label,
+.kb_label .description,
+.kb_label .close {
+	display: flex;
+	align-items: center;
+}
+
+.kb_label .icon {
+	padding-left: 0.5rem;
+}
+
+.kb_label .label,
+.kb_label .description {
+	padding: 0.5rem;
+}
+
+.kb_label .close {
+	padding: 0 0.5rem;
+}
+
+.kb_label a.image > img,
+.kb_label img.image {
+	position: absolute;
+	height: 100%;
+}
+
+.kb_label .image + .icon,
+.kb_label .image + .label,
+.kb_label .image + .link_group .icon:first-child,
+.kb_label .image + .link_group .label:first-child {
+	padding-left: 2.5rem;
+}
+
+.kb_label > .link_group {
+	display: flex;
+}
+
+/* xs */
+
+.kb_label.xs { font-size: 0.6rem; }
+.kb_label.xs .icon { padding-left: 0.3; }
+.kb_label.xs .label,
+.kb_label.xs .description { padding: 0.3rem; }
+.kb_label.xs .close { padding: 0 0.3rem; }
+.kb_label.xs .image + .icon,
+.kb_label.xs .image + .label,
+.kb_label.xs .image + .link_group .icon:first-child,
+.kb_label.xs .image + .link_group .label:first-child { padding-left: 1.5rem; }
+
+/* sm */
+
+.kb_label.sm { font-size: 0.8rem; }
+.kb_label.sm .icon { padding-left: 0.4; }
+.kb_label.sm .label,
+.kb_label.sm .description { padding: 0.4rem; }
+.kb_label.sm .close { padding: 0 0.4rem; }
+.kb_label.sm .image + .icon,
+.kb_label.sm .image + .label,
+.kb_label.sm .image + .link_group .icon:first-child,
+.kb_label.sm .image + .link_group .label:first-child { padding-left: 2rem; }
+
+/* lg */
+
+.kb_label.lg { font-size: 1.2rem; }
+.kb_label.lg .icon { padding-left: 0.6; }
+.kb_label.lg .label,
+.kb_label.lg .description { padding: 0.6rem; }
+.kb_label.lg .close { padding: 0 0.6rem; }
+.kb_label.lg .image + .icon,
+.kb_label.lg .image + .label,
+.kb_label.lg .image + .link_group .icon:first-child,
+.kb_label.lg .image + .link_group .label:first-child { padding-left: 3rem; }
+
+/* xl */
+
+.kb_label.xl { font-size: 1.4rem; }
+.kb_label.xl .icon { padding-left: 0.7; }
+.kb_label.xl .label,
+.kb_label.xl .description { padding: 0.7rem; }
+.kb_label.xl .close { padding: 0 0.7rem; }
+.kb_label.xl .image + .icon,
+.kb_label.xl .image + .label,
+.kb_label.xl .image + .link_group .icon:first-child,
+.kb_label.xl .image + .link_group .label:first-child { padding-left: 3.5rem; }
+
+/*
+Slightly rounded
+================================================================================
+*/
+
+.kb_label {
+	border-radius: 0.2rem;
+}
+
+/* left side */
+
+.kb_label a.image > img,
+.kb_label img.image,
+.kb_label a.icon:first-child,
+.kb_label .image + a.icon,
+.kb_label a.label:first-child,
+.kb_label .image + a.label,
+.kb_label a.link_group:first-child,
+.kb_label .image + a.link_group {
+	border-top-left-radius: 0.2rem;
+	border-bottom-left-radius: 0.2rem;
+}
+
+/* right side */
+
+.kb_label a.label:last-child,
+.kb_label a.description:last-child,
+.kb_label a.close,
+.kb_label a.link_group:last-child {
+	border-top-right-radius: 0.2rem;
+	border-bottom-right-radius: 0.2rem;
+}
+
+/*
+Circular
+================================================================================
+
+The logic here is identical to that above except a higher value is used.
+Specifically, a value of (270 * 16 === 4320) is used, which is the same number
+of pixels that an 8k monitor has in height.
+
+*/
+
+.kb_label.circular {
+	border-radius: 270rem;
+}
+
+/* left side */
+
+.kb_label.circular a.image > img,
+.kb_label.circular img.image,
+.kb_label.circular a.icon:first-child,
+.kb_label.circular .image + a.icon,
+.kb_label.circular a.label:first-child,
+.kb_label.circular .image + a.label,
+.kb_label.circular a.link_group:first-child,
+.kb_label.circular .image + a.link_group {
+	border-top-left-radius: 270rem;
+	border-bottom-left-radius: 270rem;
+}
+
+/* right side */
+
+.kb_label.circular a.label:last-child,
+.kb_label.circular a.description:last-child,
+.kb_label.circular a.close,
+.kb_label.circular a.link_group:last-child {
+	border-top-right-radius: 270rem;
+	border-bottom-right-radius: 270rem;
+}
+
+/*
+Colors
+================================================================================
+*/
+
+.kb_label,
+.kb_label.white {  background: #fefefe; color: #000; }
+.kb_label.red {    background: #db2828; color: #fff; }
+.kb_label.orange { background: #f2711c; color: #fff; }
+.kb_label.yellow { background: #fbbd08; color: #fff; }
+.kb_label.olive {  background: #b5cc18; color: #fff; }
+.kb_label.green {  background: #21ba45; color: #fff; }
+.kb_label.teal {   background: #00b5ad; color: #fff; }
+.kb_label.blue {   background: #2185d0; color: #fff; }
+.kb_label.violet { background: #6435c9; color: #fff; }
+.kb_label.purple { background: #a333c8; color: #fff; }
+.kb_label.pink {   background: #e03997; color: #fff; }
+.kb_label.brown {  background: #a5673f; color: #fff; }
+.kb_label.gray {   background: #767676; color: #fff; }
+.kb_label.black {  background: #1b1c1d; color: #fff; }
+
+/* Description colors */
+
+.kb_label .description,
+.kb_label.white .description { color: rgba(0, 0, 0, 0.75); }
+.kb_label.red .description,
+.kb_label.orange .description,
+.kb_label.yellow .description,
+.kb_label.olive .description,
+.kb_label.green .description,
+.kb_label.teal .description,
+.kb_label.blue .description,
+.kb_label.violet .description,
+.kb_label.purple .description,
+.kb_label.pink .description,
+.kb_label.brown .description,
+.kb_label.gray .description,
+.kb_label.black .description { color: rgba(255, 255, 255, 0.75); }
+
+/* Link colors */
+
+.kb_label a,
+.kb_label.white a { color: #000; }
+.kb_label.red a,
+.kb_label.orange a,
+.kb_label.yellow a,
+.kb_label.olive a,
+.kb_label.green a,
+.kb_label.teal a,
+.kb_label.blue a,
+.kb_label.violet a,
+.kb_label.purple a,
+.kb_label.pink a,
+.kb_label.brown a,
+.kb_label.gray a,
+.kb_label.black a { color: #fff; }
+
+/* Link hover colors */
+
+.kb_label a:hover { background: rgba(0, 0, 0, 0.2); }
+.kb_label.black a:hover { background: rgba(255, 255, 255, 0.2); }
+
+a.kb_label:hover,
+a.kb_label.white:hover { background: #cbcbcb; }
+a.kb_label.red:hover { background: #af2020; }
+a.kb_label.orange:hover { background: #c15a16; }
+a.kb_label.yellow:hover { background: #c89706; }
+a.kb_label.olive:hover { background: #90a313; }
+a.kb_label.green:hover { background: #1a9437; }
+a.kb_label.teal:hover { background: #00908a; }
+a.kb_label.blue:hover { background: #1a6aa6; }
+a.kb_label.violet:hover { background: #502aa0; }
+a.kb_label.purple:hover { background: #8228a0; }
+a.kb_label.pink:hover { background: #b32d78; }
+a.kb_label.brown:hover { background: #845232; }
+a.kb_label.gray:hover { background: #5e5e5e; }
+a.kb_label.black:hover { background: #48494a; }
+
+/* Pointing colors */
+
+.kb_label.point::after { border-color: #fff; }
+.kb_label.red.point::after { border-color: #db2828; }
+.kb_label.orange.point::after { border-color: #f2711c; }
+.kb_label.yellow.point::after { border-color: #fbbd08; }
+.kb_label.olive.point::after { border-color: #b5cc18; }
+.kb_label.green.point::after { border-color: #21ba45; }
+.kb_label.teal.point::after { border-color: #00b5ad; }
+.kb_label.blue.point::after { border-color: #2185d0; }
+.kb_label.violet.point::after { border-color: #6435c9; }
+.kb_label.purple.point::after { border-color: #a333c8; }
+.kb_label.pink.point::after { border-color: #e03997; }
+.kb_label.brown.point::after { border-color: #a5673f; }
+.kb_label.gray.point::after { border-color: #767676; }
+.kb_label.black.point::after { border-color: #1b1c1d; }
+
+/* Corner colors */
+
+.kb_label_corner, a.kb_label_corner,
+.kb_label_corner.white, a.kb_label_corner.white { color: #000; }
+.kb_label_corner.red, a.kb_label_corner.red,
+.kb_label_corner.orange, a.kb_label_corner.orange,
+.kb_label_corner.yellow, a.kb_label_corner.yellow,
+.kb_label_corner.olive, a.kb_label_corner.olive,
+.kb_label_corner.green, a.kb_label_corner.green,
+.kb_label_corner.teal, a.kb_label_corner.teal,
+.kb_label_corner.blue, a.kb_label_corner.blue,
+.kb_label_corner.violet, a.kb_label_corner.violet,
+.kb_label_corner.purple, a.kb_label_corner.purple,
+.kb_label_corner.pink, a.kb_label_corner.pink,
+.kb_label_corner.brown, a.kb_label_corner.brown,
+.kb_label_corner.gray, a.kb_label_corner.gray,
+.kb_label_corner.black, a.kb_label_corner.black { color: #fff; }
+
+.kb_label_corner.top_left,
+.kb_label_corner.top_left.white { background: linear-gradient(135deg, #fff 50%, transparent 50%); }
+.kb_label_corner.top_left.red { background: linear-gradient(135deg, #db2828 50%, transparent 50%); }
+.kb_label_corner.top_left.orange { background: linear-gradient(135deg, #f2711c 50%, transparent 50%); }
+.kb_label_corner.top_left.yellow { background: linear-gradient(135deg, #fbbd08 50%, transparent 50%); }
+.kb_label_corner.top_left.olive { background: linear-gradient(135deg, #b5cc18 50%, transparent 50%); }
+.kb_label_corner.top_left.green { background: linear-gradient(135deg, #21ba45 50%, transparent 50%); }
+.kb_label_corner.top_left.teal { background: linear-gradient(135deg, #00b5ad 50%, transparent 50%); }
+.kb_label_corner.top_left.blue { background: linear-gradient(135deg, #2185d0 50%, transparent 50%); }
+.kb_label_corner.top_left.violet { background: linear-gradient(135deg, #6435c9 50%, transparent 50%); }
+.kb_label_corner.top_left.purple { background: linear-gradient(135deg, #a333c8 50%, transparent 50%); }
+.kb_label_corner.top_left.pink { background: linear-gradient(135deg, #e03997 50%, transparent 50%); }
+.kb_label_corner.top_left.brown { background: linear-gradient(135deg, #a5673f 50%, transparent 50%); }
+.kb_label_corner.top_left.gray { background: linear-gradient(135deg, #767676 50%, transparent 50%); }
+.kb_label_corner.top_left.black { background: linear-gradient(135deg, #1b1c1d 50%, transparent 50%); }
+
+.kb_label_corner.top_right,
+.kb_label_corner.top_right.white { background: linear-gradient(225deg, #fff 50%, transparent 50%); }
+.kb_label_corner.top_right.red { background: linear-gradient(225deg, #db2828 50%, transparent 50%); }
+.kb_label_corner.top_right.orange { background: linear-gradient(225deg, #f2711c 50%, transparent 50%); }
+.kb_label_corner.top_right.yellow { background: linear-gradient(225deg, #fbbd08 50%, transparent 50%); }
+.kb_label_corner.top_right.olive { background: linear-gradient(225deg, #b5cc18 50%, transparent 50%); }
+.kb_label_corner.top_right.green { background: linear-gradient(225deg, #21ba45 50%, transparent 50%); }
+.kb_label_corner.top_right.teal { background: linear-gradient(225deg, #00b5ad 50%, transparent 50%); }
+.kb_label_corner.top_right.blue { background: linear-gradient(225deg, #2185d0 50%, transparent 50%); }
+.kb_label_corner.top_right.violet { background: linear-gradient(225deg, #6435c9 50%, transparent 50%); }
+.kb_label_corner.top_right.purple { background: linear-gradient(225deg, #a333c8 50%, transparent 50%); }
+.kb_label_corner.top_right.pink { background: linear-gradient(225deg, #e03997 50%, transparent 50%); }
+.kb_label_corner.top_right.brown { background: linear-gradient(225deg, #a5673f 50%, transparent 50%); }
+.kb_label_corner.top_right.gray { background: linear-gradient(225deg, #767676 50%, transparent 50%); }
+.kb_label_corner.top_right.black { background: linear-gradient(225deg, #1b1c1d 50%, transparent 50%); }
+
+a.kb_label_corner.top_left:hover,
+a.kb_label_corner.top_left.white:hover { background: linear-gradient(135deg, #cbcbcb 50%, transparent 50%); }
+a.kb_label_corner.top_left.red:hover { background: linear-gradient(135deg, #af2020 50%, transparent 50%); }
+a.kb_label_corner.top_left.orange:hover { background: linear-gradient(135deg, #c15a16 50%, transparent 50%); }
+a.kb_label_corner.top_left.yellow:hover { background: linear-gradient(135deg, #c89706 50%, transparent 50%); }
+a.kb_label_corner.top_left.olive:hover { background: linear-gradient(135deg, #90a313 50%, transparent 50%); }
+a.kb_label_corner.top_left.green:hover { background: linear-gradient(135deg, #1a9437 50%, transparent 50%); }
+a.kb_label_corner.top_left.teal:hover { background: linear-gradient(135deg, #00908a 50%, transparent 50%); }
+a.kb_label_corner.top_left.blue:hover { background: linear-gradient(135deg, #1a6aa6 50%, transparent 50%); }
+a.kb_label_corner.top_left.violet:hover { background: linear-gradient(135deg, #502aa0 50%, transparent 50%); }
+a.kb_label_corner.top_left.purple:hover { background: linear-gradient(135deg, #8228a0 50%, transparent 50%); }
+a.kb_label_corner.top_left.pink:hover { background: linear-gradient(135deg, #b32d78 50%, transparent 50%); }
+a.kb_label_corner.top_left.brown:hover { background: linear-gradient(135deg, #845232 50%, transparent 50%); }
+a.kb_label_corner.top_left.gray:hover { background: linear-gradient(135deg, #5e5e5e 50%, transparent 50%); }
+a.kb_label_corner.top_left.black:hover { background: linear-gradient(135deg, #48494a 50%, transparent 50%); }
+
+a.kb_label_corner.top_right:hover,
+a.kb_label_corner.top_right.white:hover { background: linear-gradient(225deg, #cbcbcb 50%, transparent 50%); }
+a.kb_label_corner.top_right.red:hover { background: linear-gradient(225deg, #af2020 50%, transparent 50%); }
+a.kb_label_corner.top_right.orange:hover { background: linear-gradient(225deg, #c15a16 50%, transparent 50%); }
+a.kb_label_corner.top_right.yellow:hover { background: linear-gradient(225deg, #c89706 50%, transparent 50%); }
+a.kb_label_corner.top_right.olive:hover { background: linear-gradient(225deg, #90a313 50%, transparent 50%); }
+a.kb_label_corner.top_right.green:hover { background: linear-gradient(225deg, #1a9437 50%, transparent 50%); }
+a.kb_label_corner.top_right.teal:hover { background: linear-gradient(225deg, #00908a 50%, transparent 50%); }
+a.kb_label_corner.top_right.blue:hover { background: linear-gradient(225deg, #1a6aa6 50%, transparent 50%); }
+a.kb_label_corner.top_right.violet:hover { background: linear-gradient(225deg, #502aa0 50%, transparent 50%); }
+a.kb_label_corner.top_right.purple:hover { background: linear-gradient(225deg, #8228a0 50%, transparent 50%); }
+a.kb_label_corner.top_right.pink:hover { background: linear-gradient(225deg, #b32d78 50%, transparent 50%); }
+a.kb_label_corner.top_right.brown:hover { background: linear-gradient(225deg, #845232 50%, transparent 50%); }
+a.kb_label_corner.top_right.gray:hover { background: linear-gradient(225deg, #5e5e5e 50%, transparent 50%); }
+a.kb_label_corner.top_right.black:hover { background: linear-gradient(225deg, #48494a 50%, transparent 50%); }
+
+/*
+Point
+================================================================================
+
+This is just an additional style that we can apply to the label. It does not
+affect anything else.
+
+*/
+
+.kb_label.point::after {
+	content: '';
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	border-width: 0.25rem;
+	border-style: solid;
+	z-index: -1;
+}
+
+.kb_label.point.top::after {
+	top: 0%;
+	left: 50%;
+}
+
+.kb_label.point.right::after {
+	top: 50%;
+	left: 100%;
+}
+
+.kb_label.point.bottom::after {
+	top: 100%;
+	left: 50%;
+}
+
+.kb_label.point.left::after {
+	top: 50%;
+	left: 0%;
+}
+
+/*
+Corner
+================================================================================
+
+The corner labels are separate classes and are not related to kb_label.
+
+*/
+
+.kb_label_corner {
+	padding: 0.25rem;
+	position: absolute;
+	top: 0;
+	width: 3rem;
+	height: 3rem;
+}
+
+.kb_label_corner.top_left {
+	left: 0;
+}
+
+.kb_label_corner.top_right {
+	text-align: right;
+	right: 0;
+}
