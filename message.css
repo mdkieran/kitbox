@@ -1,0 +1,72 @@
+.kb_message {
+	background: #fefefe;
+	border-radius: 0.2rem;
+}
+
+.kb_message a {
+	color: inherit;
+	font-weight: bold;
+}
+
+.kb_message .content {
+	padding: 1rem;
+}
+
+.kb_message .content > p {
+	padding-top: 0.5rem;
+}
+
+.kb_message .content li {
+	left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	position: relative;
+}
+
+.kb_message .content li::before {
+	content: '•';
+	display: block;
+	left: -1rem;
+	position: absolute;
+}
+
+.kb_message .close {
+	padding: 0 1rem;
+	border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.kb_message .close:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.kb_message .huge_icon {
+	padding: 1rem 0 1rem 1rem;
+}
+
+.kb_message .huge_icon i {
+	font-size: 3rem;
+}
+
+.kb_message .header {
+	font-weight: bold;
+}
+
+.kb_message.danger {
+	background-color: #ffcfcb;
+	color: #db2828;
+}
+
+.kb_message.success {
+	background-color: #efffcb;
+	color: #2c662d;
+}
+
+.kb_message.warning {
+	background-color: #ffeacb;
+	color: #573a08;
+}
+
+.kb_message.info {
+	background-color: #cbf4ff;
+	color: #276f86;
+}

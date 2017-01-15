@@ -1,0 +1,125 @@
+<!doctype html>
+<html dir='ltr' lang='en-gb'>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width'/>
+		<title>Message</title>
+		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+		<link href='normalize.css' rel='stylesheet'/>
+		<link href='grid.css' rel='stylesheet'/>
+		<link href='message.css' rel='stylesheet'/>
+		<style>
+			body {
+				background: #ccc;
+			}
+		
+			#example_wrapper {
+				max-width: 1200px;
+				padding: 0 1rem 1rem;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='example_wrapper'>
+			<!-- message with icon !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message'>
+					<p class='content'>We've just updated our <a href="#">terms and conditions</a>. They are important so please read them.</p>
+				</div>
+			</div>
+			<!-- message with dismiss !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message danger kb_grid flex'>
+					<p class='content grow'><i class='fa fa-ban'></i> You do not have permission to do that.</p>
+					<button class='close'><i class='fa fa-times'></i></button>
+				</div>
+			</div>
+			<!-- header, no description !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message success kb_grid flex'>
+					<p class='content grow header'><i class='fa fa-check'></i> Success, your files have been saved.</p>
+					<button class='close'><i class='fa fa-times'></i></button>
+				</div>
+			</div>
+			<!-- header and description !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message warning kb_grid flex'>
+					<div class='content grow'>
+						<h1><i class='fa fa-warning'></i> You must be a member before you can do that!</h1>
+						<p>Please <a href="#">sign up</a> or <a href="#">sign in</a> to continue.</p>
+					</div>
+					<button class='close'><i class='fa fa-times'></i></button>
+				</div>
+			</div>
+			<!-- large icon !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message info kb_grid flex'>
+					<div class='huge_icon'>
+						<i class='fa fa-inbox'></i>
+					</div>
+					<div class='content grow'>
+						<h1>Have you subscribed to our mailing list yet?</h1>
+						<p>We send fantastic offers that you'll only find if you subscribe.</p>
+					</div>
+					<button class='close'><i class='fa fa-times'></i></button>
+				</div>
+			</div>
+			<!-- list !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message kb_grid flex'>
+					<div class='content grow'>
+						<h1>Please note</h1>
+						<ul>
+							<li>You can now upload your own avatar.</li>
+							<li>Only superusers can edit your details.</li>
+						</ul>
+					</div>
+					<button class='close'><i class='fa fa-times'></i></button>
+				</div>
+			</div>
+			<!-- large icon with list !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message blue kb_grid flex'>
+					<div class='huge_icon'>
+						<i class='fa fa-cog'></i>
+					</div>
+					<div class='content grow'>
+						<h1>Important changes</h1>
+						<ul>
+							<li>We are migrating to a new server, please note that data will not be saved during this time.</li>
+							<li>During the migration, there is a 97.5% chance that we will lose everything.</li>
+							<li>If we do lose everything, we have all agreed to jump out the nearest window.</li>
+						</ul>
+					</div>
+					<button class='close'><i class='fa fa-times'></i></button>
+				</div>
+			</div>
+			<!-- loading !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message kb_grid flex'>
+					<div class='huge_icon'>
+						<i class='fa fa-circle-o-notch fa-spin'></i>
+					</div>
+					<div class='content grow'>
+						<h1>Loading</h1>
+						<p>Please wait whilst we fetch that data for you.</p>
+					</div>
+				</div>
+			</div>
+			<!-- welcome back !-->
+			<div class='kb_grid pad_top'>
+				<div class='kb_message kb_grid flex'>
+					<div class='content grow'>
+						<h1>Welcome back</h1>
+						<p>It's great to see you again.</p>
+					</div>
+					<button class='close'><i class='fa fa-times'></i></button>
+				</div>
+			</div>
+		</div>
+		<!-- scripts !-->
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		<script src='message.js'></script>
+	</body>
+</html>
