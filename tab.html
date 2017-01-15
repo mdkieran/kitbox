@@ -1,0 +1,93 @@
+<!doctype html>
+<html dir='ltr' lang='en-gb'>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width'/>
+		<title>Tab</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet'/>
+		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+		<link href='normalize.css' rel='stylesheet'/>
+		<link href='grid.css' rel='stylesheet'/>
+		<link href='tab.css' rel='stylesheet'/>
+		<style>
+			html {
+				font-family: 'Open Sans';
+			}
+
+			body {
+				background: #efefef;
+			}
+
+			#example_wrapper {
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='example_wrapper' class='kb_grid'>
+			<h1>Tab examples</h1>
+			<p class='pad_top'>Kitbox tab has been designed to be accessible (using ARIA technology). Inspiration has been taken from <a href='http://getbootstrap.com/javascript/#tabs-usage'>Bootstrap</a>, <a href='http://simplyaccessible.com/article/danger-aria-tabs/'>Jeff Smith</a>, <a href='http://accessibility.athena-ict.com/aria/examples/tabpanel2.shtml'>Athena ICT</a>, and <a href='https://www.w3.org/TR/2010/WD-wai-aria-practices-20100916/#tabpanel'>W3C</a>.</p>
+			<p class='pad_top'>By default, no styling is applied (other than to hide inactive tab panels). However, you may apply the class "line" to the kb_tabs container to get something which looks like example 2.</p>
+			<p class='pad_top'>Also, please note that you <b>can</b> nest tabs within tabs.</p>
+			<h2 class='pad_top'>Example 1 (no style)</h2>
+			<!-- tab tabs !-->
+			<ul class='kb_tabs pad_top' role='tablist'>
+				<li aria-controls='panel_1' aria-selected='true' class='tab' id='tab_1' role='tab' tabindex='0'>Tab 1</li>
+				<li aria-controls='panel_2' aria-selected='false' class='tab' id='tab_2' role='tab' tabindex='0'>Tab 2</li>
+				<li aria-controls='panel_3' aria-selected='false' class='tab' id='tab_3' role='tab' tabindex='0'>Tab 3</li>
+				<li aria-controls='panel_4' aria-selected='false' class='tab' id='tab_4' role='tab' tabindex='0'>Tab 4</li>
+			</ul>
+			<!-- tab panels !-->
+			<div class='kb_panels pad_top'>
+				<div aria-hidden='false' aria-labelledby='tab_1' class='panel' id='panel_1' role='tabpanel'>
+					<h3 tabindex='0'>Tab 1</h3>
+					<p>This is the first tab.</p>
+				</div>
+				<div aria-hidden='true' aria-labelledby='tab_2' class='panel' id='panel_2' role='tabpanel'>
+					<h3 tabindex='0'>Tab 2</h3>
+					<p>Here is the second tab.</p>
+				</div>
+				<div aria-hidden='true' aria-labelledby='tab_3' class='panel' id='panel_3' role='tabpanel'>
+					<h3 tabindex='0'>Tab 3</h3>
+					<p>Welcome to the third tab.</p>
+				</div>
+				<div aria-hidden='true' aria-labelledby='tab_4' class='panel' id='panel_4' role='tabpanel'>
+					<h3 tabindex='0'>Tab 4</h3>
+					<p>You're now at the fourth and final tab.</p>
+				</div>
+			</div>
+			<h2 class='pad_top'>Example 2 (the "line" style)</h2>
+			<!-- tab tabs !-->
+			<ul class='kb_tabs line pad_top' role='tablist'>
+				<li aria-controls='panel_5' aria-selected='false' class='tab' id='tab_5' role='tab' tabindex='0'>Tab 5</li>
+				<li aria-controls='panel_6' aria-selected='true' class='tab' id='tab_6' role='tab' tabindex='0'>Tab 6</li>
+				<li aria-controls='panel_7' aria-selected='false' class='tab' id='tab_7' role='tab' tabindex='0'>Tab 7</li>
+				<li aria-controls='panel_8' aria-selected='false' class='tab' id='tab_8' role='tab' tabindex='0'>Tab 8</li>
+			</ul>
+			<!-- tab panels !-->
+			<div class='kb_panels pad_top'>
+				<div aria-hidden='true' aria-labelledby='tab_5' class='panel' id='panel_5' role='tabpanel'>
+					<h3 tabindex='0'>Tab 5</h3>
+					<p>"Give me five" usually preceeds a high five.</p>
+				</div>
+				<div aria-hidden='false' aria-labelledby='tab_6' class='panel' id='panel_6' role='tabpanel'>
+					<h3 tabindex='0'>Tab 6</h3>
+					<p>Six.</p>
+				</div>
+				<div aria-hidden='true' aria-labelledby='tab_7' class='panel' id='panel_7' role='tabpanel'>
+					<h3 tabindex='0'>Tab 7</h3>
+					<p>Seven.</p>
+				</div>
+				<div aria-hidden='true' aria-labelledby='tab_8' class='panel' id='panel_8' role='tabpanel'>
+					<h3 tabindex='0'>Tab 8</h3>
+					<p>Eight bits in a byte.</p>
+				</div>
+			</div>
+		</div>
+		<!-- script !-->
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		<script src='tab.js'></script>
+	</body>
+</html>

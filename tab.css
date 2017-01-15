@@ -1,0 +1,22 @@
+/* This style hides inactive tab panels */
+
+.kb_panels .panel[aria-hidden='true'] {
+	display: none;
+}
+
+/* Optional styles */
+
+.kb_tabs.line {
+	box-shadow: inset 0 -2px 0 0 #ccc;
+}
+
+.kb_tabs.line .tab {
+	display: inline-block;
+	padding: 0.5rem;
+	cursor: default;
+}
+
+.kb_tabs.line .tab[aria-selected='true'] {
+	border-bottom: 2px solid #000;
+	font-weight: bold;
+}
