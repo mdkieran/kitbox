@@ -2,12 +2,12 @@
 1. The icons are sharpest at 14px.
 */
 
-.kb.slidemenu i {
+.kb_slidemenu i {
 	font-size: 14px; /* 1 */
 }
 
-.kb.slidemenu a i {
-	width: 26px; /* 14 + 12 */
+.kb_slidemenu a i {
+	width: 22px; /* 14 + 8 */
 }
 
 /*
@@ -18,19 +18,19 @@
    will not collapse the ul. Secondly, http://stackoverflow.com/a/8331169
 */
 
-.kb.slidemenu ul {
+.kb_slidemenu ul {
 	max-height: 0; /* 2 */
 	opacity: 0; /* 1 */
 	visibility: hidden; /* 1 */
 }
 
-.kb.slidemenu div {
+.kb_slidemenu div {
 	display: flex;
 }
 
-.kb.slidemenu div a {
+.kb_slidemenu div a {
 	flex: 1 0 auto;
-	padding: 12px;
+	padding: 8px 16px;
 }
 
 /*
@@ -40,8 +40,8 @@
    are magic like that.
 */
 
-.kb.slidemenu div button {
-	padding: 0 12px; /* 1 */
+.kb_slidemenu div button {
+	padding: 0 16px; /* 1 */
 }
 
 /*
@@ -49,7 +49,7 @@ Style the dropdown button icon when the menu is not active. This requires
 font awesome.
 */
 
-.kb.slidemenu div button i::before {
+.kb_slidemenu div button i::before {
 	content: '\f0d7';
 }
 
@@ -59,29 +59,29 @@ font awesome.
 3. Hover and active.
 */
 
-.kb.slidemenu div:hover, /* 1 */
-.kb.slidemenu button:hover, /* 1 */
-.kb.slidemenu li.active > ul, /* 2 */
-.kb.slidemenu li.active > div button, /* 2 */
-.kb.slidemenu li.active > div a:hover /* 3 */ {
-	background: rgba(0,0,0,0.15);
+.kb_slidemenu div:hover, /* 1 */
+.kb_slidemenu button:hover, /* 1 */
+.kb_slidemenu li.active > ul, /* 2 */
+.kb_slidemenu li.active > div button, /* 2 */
+.kb_slidemenu li.active > div a:hover /* 3 */ {
+	background: rgba(0, 0, 0, 0.2);
 }
 
-.kb.slidemenu li.active > ul /* 2 */ {
+.kb_slidemenu li.active > ul /* 2 */ {
 	max-height: 2160px;
 	opacity: 1;
 	transition: max-height 1s, opacity 0.4s;
 	visibility: visible;
 }
 
-.kb.slidemenu li.active > div button i::before /* 2 */ {
+.kb_slidemenu li.active > div button i::before /* 2 */ {
 	content: '\f0d8';
 }
 
-.kb.slidemenu li.active > div button:hover /* 3 */ {
-	background: rgba(0,0,0,0.3);
+.kb_slidemenu li.active > div button:hover /* 3 */ {
+	background: rgba(0, 0, 0, 0.4);
 }
 
-.kb.slidemenu li.active > div:hover /* 3 */ {
+.kb_slidemenu li.active > div:hover /* 3 */ {
 	background: transparent;
 }
