@@ -1,0 +1,153 @@
+<!doctype html>
+<html dir='ltr' lang='en-gb'>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='viewport' content='width=device-width'/>
+		<title>Grid</title>
+		<link href='normalize.css' rel='stylesheet'/>
+		<link href='grid.css' rel='stylesheet'/>
+		<style>
+			#example_wrapper {
+				background: rgba(0, 0, 0, 0.2);
+				max-width: 75rem;
+				margin: 0 auto;
+				padding: 1rem;
+			}
+			
+			.bg_1 { background: white; }
+			.bg_2 { background: lightgreen; }
+			.bg_3 { background: skyblue; }
+			.bg_4 { background: hotpink; }
+			.bg_5 { background: mediumpurple; }
+			
+			.some_box_thing {
+				background: white;
+				border-radius: 0.2rem;
+				padding: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='example_wrapper'>
+			<h1>Grid examples</h1>
+			<!-- Example !-->
+			<div class='kb_grid pad_top bg_1'>This div has nothing except a padding-top and background-color.</div>
+			<hr/>
+			<!-- Example 2 !-->
+			<div class='kb_grid pad_top bg_1'>
+				<div class='bg_2'>This div just has a background-color. The parent of this div is identical to the one above.</div>
+			</div>
+			<hr/>
+			<!-- Example 3 !-->
+			<div class='kb_grid pad_top flex bg_1'>
+				<div class='col_xs_6 bg_2'>The parent of this div is a standard flex-container (except that it has wrapping enabled).</div>
+				<div class='col_xs_6 bg_3'>The flex-items (these colored divs) both have a fixed width of 50% and no other styling (well, except for the background-color).</div>
+			</div>
+			<hr/>
+			<!-- Example 4 !-->
+			<p class='kb_grid pad_top'>You can have more advanced and responsive columns (try resizing the browser). The following flex-container and flex-items have no padding, margin or anything.</p>
+			<div class='kb_grid flex'>
+				<div class='col_xs_6 col_sm_4 col_md_3 col_lg_2 bg_1'>&hellip;</div>
+				<div class='col_xs_6 col_sm_4 col_md_3 col_lg_2 bg_2'>&hellip;</div>
+				<div class='col_xs_6 col_sm_4 col_md_3 col_lg_2 bg_3'>&hellip;</div>
+				<div class='col_xs_6 col_sm_4 col_md_3 col_lg_2 bg_4'>&hellip;</div>
+				<div class='col_xs_6 col_sm_4 col_md_3 col_lg_2 bg_5'>&hellip;</div>
+				<div class='col_xs_6 col_sm_4 col_md_3 col_lg_2 bg_1'>&hellip;</div>
+			</div>
+			<hr/>
+			<!-- Example 5 !-->
+			<p class='kb_grid pad_top'>You can have fixed-width gutters between flex-items. There is no trickery here. All we have done is set the flex-container to have a negative margin-left and all flex-items to have a padding top and left (of equal measure). You could easily change the gutter size by changing the negative margin-left and the padding amounts.</p>
+			<div class='kb_grid flex pull_left'>
+				<div class='col_xs_3 pad_both bg_3'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_3 pad_both bg_2'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_3 pad_both bg_3'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_3 pad_both bg_2'><div class='bg_1'>&hellip;</div></div>
+			</div>
+			<hr/>
+			<!-- Example 6 !-->
+			<p class='kb_grid pad_top'>Here is a nicer and more responsive example of the above. As you can see, the gutter is always the same size and matches perfectly with the wrappers padding (this big gray area).</p>
+			<div class='kb_grid flex pull_left'>
+				<div class='col_xs_12 col_sm_6 col_md_3 pad_both'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_12 col_sm_6 col_md_3 pad_both'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_12 col_sm_6 col_md_3 pad_both'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_12 col_sm_6 col_md_3 pad_both'><div class='bg_1'>&hellip;</div></div>
+			</div>
+			<hr/>
+			<!-- Example 7 !-->
+			<p class='kb_grid pad_top'>Let's go crazy. Here's an example of a flex-container within a flex-container. The two on the left are 50% wide (and 100% wide in xs mode) flex-items and the one on the right is just a 50% wide flex-item.</p>
+			<div class='kb_grid flex pad_top pull_left'>
+				<div class='col_xs_6 pad_left bg_3'>
+					<div class='flex pull_left'>
+						<div class='pad_both col_xs_12 col_sm_6 bg_4'>
+							<div class='bg_5'>&hellip;</div>
+						</div>
+						<div class='pad_both col_xs_12 col_sm_6 bg_4'>
+							<div class='bg_5'>&hellip;</div>
+						</div>
+					</div>
+				</div>
+				<div class='col_xs_6 pad_both bg_2'>
+					<div class='bg_4'>&hellip;</div>
+				</div>
+			</div>
+			<hr/>
+			<!-- Example 8 !-->
+			<p class='kb_grid pad_top'>Applying pad_both to each flex-item might become a bit tedious if we know for certain that every flex-item will need it. In this case, we can just use the gutter class on the flex-container and the rest is done for us.</p>
+			<div class='kb_grid flex gutter'>
+				<div class='col_xs_12 col_sm_6 col_md_3'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_12 col_sm_6 col_md_3'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_12 col_sm_6 col_md_3'><div class='bg_1'>&hellip;</div></div>
+				<div class='col_xs_12 col_sm_6 col_md_3'><div class='bg_1'>&hellip;</div></div>
+			</div>
+			<hr/>
+			<!-- Example 9 !-->
+			<p class='kb_grid pad_top'>Here's the entire grid. It's split up into twelfths as 12 has a good number of factors.</p>
+			<div class='kb_grid flex gutter'>
+				<div class='col_xs_1  col_sm_12 col_md_1  col_lg_12 col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_11 col_md_1  col_lg_11 col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_1  col_md_1  col_lg_1  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_10 col_md_1  col_lg_10 col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_2  col_md_1  col_lg_2  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_9  col_md_1  col_lg_9  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_3  col_md_1  col_lg_3  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_8  col_md_1  col_lg_8  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_4  col_md_1  col_lg_4  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_7  col_md_1  col_lg_7  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_5  col_md_1  col_lg_5  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_6  col_md_1  col_lg_6  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_6  col_md_2  col_lg_6  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_5  col_md_2  col_lg_5  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_5  col_md_2  col_lg_5  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_2  col_md_2  col_lg_2  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_4  col_md_2  col_lg_4  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_4  col_md_2  col_lg_4  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_3  col_sm_4  col_md_3  col_lg_4  col_xl_3'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_3  col_sm_3  col_md_3  col_lg_3  col_xl_3'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_3  col_sm_3  col_md_3  col_lg_3  col_xl_3'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_3  col_sm_3  col_md_3  col_lg_3  col_xl_3'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_4  col_sm_3  col_md_4  col_lg_3  col_xl_4'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_4  col_sm_2  col_md_4  col_lg_2  col_xl_4'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_4  col_sm_2  col_md_4  col_lg_2  col_xl_4'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_5  col_sm_2  col_md_5  col_lg_2  col_xl_5'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_5  col_sm_2  col_md_5  col_lg_2  col_xl_5'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_2  col_md_2  col_lg_2  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_6  col_sm_2  col_md_6  col_lg_2  col_xl_6'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_6  col_sm_1  col_md_6  col_lg_1  col_xl_6'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_7  col_sm_1  col_md_7  col_lg_1  col_xl_7'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_5  col_sm_1  col_md_5  col_lg_1  col_xl_5'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_8  col_sm_1  col_md_8  col_lg_1  col_xl_8'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_4  col_sm_1  col_md_4  col_lg_1  col_xl_4'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_9  col_sm_1  col_md_9  col_lg_1  col_xl_9'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_3  col_sm_1  col_md_3  col_lg_1  col_xl_3'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_10 col_sm_1  col_md_10 col_lg_1  col_xl_10'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_2  col_sm_1  col_md_2  col_lg_1  col_xl_2'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_11 col_sm_1  col_md_11 col_lg_1  col_xl_11'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_1  col_sm_1  col_md_1  col_lg_1  col_xl_1'><div class='bg_5'>&hellip;</div></div>
+				<div class='col_xs_12 col_sm_1  col_md_12 col_lg_1  col_xl_12'><div class='bg_5'>&hellip;</div></div>
+			</div>
+			<hr/>
+			<!-- Example 9 !-->
+			<p class='kb_grid pad_top'>Hopefully these examples illustrate to you the power of this grid system. It's a bit trickier to get your head around than most but it is worth it in my opinion because this way, we can let the grid classes deal with all grid related things. We don't need to apply margins or paddings on other stuff to align it. We can just focus on those individual components.</p>
+		</div>
+	</body>
+</html>
